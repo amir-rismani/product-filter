@@ -1,0 +1,123 @@
+@import url("./assets/styles/fonts.css");
+/* @import url("./assets/styles/responsive.css"); */
+
+/* Reset
+=========*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* General
+===========*/
+:root {
+  --color-primary: #6d28d9;
+  --color-secondary: #ede9fa;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #7c7c7c;
+  --color-red: #e21111;
+  --color-bg: #f6f6f6;
+  --spacing: 0.1rem;
+  --transition: all 0.3s linear;
+}
+
+html {
+  direction: rtl;
+  font-size: 62.5%;
+}
+
+body,
+* {
+  font-family: vazir;
+  font-size: 1.6rem;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+input{
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+    padding: .5rem 2rem;
+}
+input:focus{
+    border: 1px solid  var(--color-primary);
+}
+
+.header{
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.header__title{
+    font-size: 2.8rem;
+}
+
+
+.header__category .category{
+    display: flex;
+    gap: 5rem;
+}
+
+.category__item{
+    cursor: pointer;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    padding: .3rem 1.5rem;
+}
+
+.main{
+    padding: 5rem 0;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem 3rem;
+    max-width: 1170px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.product{
+    background: var(--color-white);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.product__image{
+    text-align: center;
+}
+
+.product__image img{
+    width: 100%;
+    height: 160px;
+    margin-top: 1.5rem;
+    object-fit: contain;
+  }
+
+.product__details{
+    padding: 1.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product__details .price{
+    color: var(--color-primary);
+}

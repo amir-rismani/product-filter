@@ -1,0 +1,5 @@
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 1.5rem !important;
+  }
+}
