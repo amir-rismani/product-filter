@@ -76,6 +76,7 @@ input:focus{
     border: 1px solid var(--color-primary);
     border-radius: 5px;
     padding: .3rem 1.5rem;
+    caret-color: transparent;
 }
 
 .main{
