@@ -11,122 +11,24 @@
     <header class="header">
       <h1 class="header__title">فیلتر محصول</h1>
       <div class="header__search">
-        <input type="text" placeholder="جستجوی محصول" />
+        <input type="text" placeholder="جستجوی محصول" id="search-box" />
       </div>
       <div class="header__category">
         <ul class="category">
-          <li class="category__item">همه</li>
-          <li class="category__item">کالاهای سوپر مارکتی</li>
-          <li class="category__item">مد و پوشاک</li>
-          <li class="category__item">لوازم خانگی</li>
-          <li class="category__item">ابزار آلات</li>
-          <li class="category__item">وسیله نقلیه</li>
-          <li class="category__item">لوازم تحریر</li>
+          <li class="category__item" data-filter="">همه</li>
+          <li class="category__item" data-filter="market">
+            کالاهای سوپر مارکتی
+          </li>
+          <li class="category__item" data-filter="fashion">مد و پوشاک</li>
+          <li class="category__item" data-filter="appliances">لوازم خانگی</li>
+          <li class="category__item" data-filter="tools">ابزار آلات</li>
+          <li class="category__item" data-filter="vehicle">وسیله نقلیه</li>
+          <li class="category__item" data-filter="stationery">لوازم تحریر</li>
         </ul>
       </div>
     </header>
     <main class="main">
-      <div class="products">
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-        <article class="product">
-          <div class="product__image">
-            <img src="assets/images/product.jpg" alt="نام محصول" />
-          </div>
-          <div class="product__details">
-            <span class="name">نام محصول</span>
-            <span class="price">10,000 تومان</span>
-          </div>
-        </article>
-      </div>
+      <div class="products"></div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts.js"></script>

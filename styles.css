@@ -67,7 +67,11 @@ input:focus{
 
 .header__category .category{
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: .5rem;
+    justify-content: center;
+    min-width: 350px;
 }
 
 .category__item{
