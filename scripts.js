@@ -12,7 +12,6 @@ searchBox.addEventListener("input", (event) => {
 
 categoryButtons.forEach((categoryButton) => {
   categoryButton.addEventListener("click", (event) => {
-    console.log(event.target);
     filterString = event.target.dataset.filter;
     renderProducts(products, filterString);
   });
@@ -29,15 +28,20 @@ function getProducts() {
 }
 
 function renderProducts(products, filterString) {
-  console.log(products, filterString);
   productsContainer.innerHTML = "";
-  products.forEach((product) => {
-    if (
-      product.ShopProductName.includes(filterString) ||
-      product.ShopProductGroup.includes(filterString)
-    )
-      addProductToDOM(product);
+  const filteredProducts = products.filter((product) => {
+    return (
+      product.ShopProductName.toLowerCase().includes(
+        filterString.toLowerCase()
+      ) ||
+      product.ShopProductGroup.toLowerCase().includes(
+        filterString.toLowerCase()
+      )
+    );
   });
+  filteredProducts.forEach((filteredProduct) =>
+    addProductToDOM(filteredProduct)
+  );
 }
 
 function addProductToDOM(product) {
